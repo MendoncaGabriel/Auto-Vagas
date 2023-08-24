@@ -3,7 +3,7 @@ echo Iniciando o processo de commit e push automatizado
 
 :: Substitua as linhas abaixo com suas informações
 set REPO_PATH=C:\Users\Gabriel\Documents\GitHub\Auto-Vagas
-set COMMIT_MESSAGE=autoCommit
+set COMMIT_MESSAGE=testeCommit
 
 :: Navegue para o diretório do repositório
 cd %REPO_PATH%
