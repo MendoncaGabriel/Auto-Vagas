@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AUTO VAGAS</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <header>
+      <img src="img/favicon.ico" alt="" />
+      <h1>AUTO VAGAS</h1>
+    </header>
+    <section class="assinatura">
+      <h2>Assinatura Gmail</h2>
+
+      <div class="containerInput">
+        <label for="name">Nome: </label>
+        <input type="text" id="name" /> <br />
+      </div>
+      <div class="containerInput">
+        <label for="telNumber">Numero:</label>
+        <input type="text" placeholder="(92) 99999-9999" id="telNumber" />
+        <br />
+      </div>
+
+
+
+      <button onclick="save()">SALVAR</button>
+    </section>
+    <main id="listaVagas"></main>
+  </body>
+</html>
+<script src="arrayVagas.js"></script>
+<script src="script.js"></script>

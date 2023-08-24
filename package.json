@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "fs-extra": "^11.1.1",
+    "googleapis": "^122.0.0",
+    "nodemailer": "^6.9.4",
+    "puppeteer": "^20.8.3",
+    "readline-async": "^0.1.0",
+    "readline-sync": "^1.4.10"
+  }
+}

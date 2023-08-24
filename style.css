@@ -1,0 +1,149 @@
+*{
+  transition: 200ms;
+  box-sizing: border-box;
+}
+body {
+  background-image: url("img/bg.jpeg");
+  overflow: auto;
+  background-attachment: fixed;
+}
+header {
+  background-color: white;
+  margin: auto;
+  width: 60%;
+  min-height: 100px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+.assinatura {
+  box-sizing: border-box;
+  padding: 20px;
+  background-color: white;
+  margin: auto;
+  width: 60%;
+  min-height: 100px;
+  margin-bottom: 20px;
+}
+.assinatura > h2 {
+  text-align: center;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+.assinatura button {
+  width: 200px;
+  padding: 7px;
+  display: block;
+  margin: auto;
+  margin-top: 50px;
+  background-color: #24aae7;
+  border: none;
+  color: white;
+  border-radius: 7px;
+  cursor: pointer;
+}
+.assinatura button:active {
+  transform: scale(1.1);
+}
+.containerInput {
+  display: flex;
+  align-items: center;
+
+  margin: auto;
+  background-color: rgb(237, 237, 237);
+  margin-bottom: 5px;
+  padding: 10px;
+}
+.containerInput > input {
+  padding: 10px;
+  margin-left: 10px;
+  width: 80%;
+}
+header > img {
+  margin-left: 20px;
+}
+header > h1 {
+  color: #145694;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  margin-left: 20px;
+}
+.vaga {
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  font-size: 1.3rem;
+  color: black;
+  font-style: none;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 10px;
+  margin-bottom: 5px;
+  cursor: pointer;
+  position: relative;
+}
+.vaga:hover {
+  /* transform: scale(1.1); */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.548);
+}
+a {
+  text-decoration: none;
+  text-align: left;
+}
+#listaVagas {
+  width: 60%;
+  max-width: 1000px;
+  margin: auto;
+}
+
+@media (max-width: 720px) {
+  #listaVagas {
+    width: 95%;
+  }
+  header {
+    width: 95%;
+  }
+  .assinatura {
+    width: 95%;
+  }
+}
+.today {
+  background-color: rgb(212, 249, 212);
+}
+.vaga p{
+  font-size: 1rem;
+  /* display: none; */
+  
+}
+.vaga a{
+  background-color: #24aae7;
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+  color: white;
+  padding: 5px;
+  border-radius: 2px;
+  width: 40%;
+
+}
+.conteudoTexto{
+  display: none;
+}
+.btnClose{
+  display: block;
+  margin-left: auto;
+  margin-right: 20px;
+  width: 40px;
+  height: 30px;
+}
+.imgDown{
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  right: 20px;
+  top: 50px;
+  transform: translate(0%, -50%);
+  background-image: url('img/icons8-para-baixo-com-quadrado-50.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+.imgDown:hover{
+  transform: translate(0%, -50%) scale(1.1); 
+}
