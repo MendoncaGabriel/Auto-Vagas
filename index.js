@@ -238,6 +238,75 @@ const fs = require('fs');
         }
     }
 
+// #5 - COMMITAR +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    function comitar(){
+        const axios = require('axios');
+
+        const accessToken = 'SEU_TOKEN_DE_ACESSO'; // Substitua pelo seu token de acesso do GitHub
+        const repoOwner = 'nome-do-proprietario'; // Substitua pelo nome do proprietário do repositório
+        const repoName = 'nome-do-repositorio'; // Substitua pelo nome do seu repositório
+        const commitMessage = 'Mensagem do commit automático';
+        const branchName = 'nome-da-branch'; // Substitua pelo nome da branch onde você deseja fazer o commit
+
+        const commitData = {
+        message: commitMessage,
+        author: {
+            name: 'Seu Nome',
+            email: 'seu@email.com',
+        },
+        parents: [],
+        tree: [],
+        };
+
+        axios({
+        method: 'post',
+        url: `https://api.github.com/repos/${repoOwner}/${repoName}/git/refs`,
+        headers: {
+            Authorization: `Bearer ${accessToken}`,
+        },
+        data: {
+            ref: `refs/heads/${branchName}`,
+            sha: 'SHA_DO_ÚLTIMO_COMMIT_DA_BRANCH', // Substitua pelo SHA do último commit na branch
+        },
+        })
+        .then((response) => {
+            const latestCommitSha = response.data.object.sha;
+            commitData.tree = latestCommitSha;
+
+            return axios.post(
+            `https://api.github.com/repos/${repoOwner}/${repoName}/git/commits`,
+            commitData,
+            {
+                headers: {
+                Authorization: `Bearer ${accessToken}`,
+                },
+            }
+            );
+        })
+        .then((response) => {
+            const newCommitSha = response.data.sha;
+
+            return axios.patch(
+            `https://api.github.com/repos/${repoOwner}/${repoName}/git/refs/heads/${branchName}`,
+            {
+                sha: newCommitSha,
+                force: true,
+            },
+            {
+                headers: {
+                Authorization: `Bearer ${accessToken}`,
+                },
+            }
+            );
+        })
+        .then(() => {
+            console.log('Commit automático realizado com sucesso!');
+        })
+        .catch((error) => {
+            console.error('Erro ao realizar o commit automático:', error);
+        });
+
+    }
 
 
 acessarPaginas()
