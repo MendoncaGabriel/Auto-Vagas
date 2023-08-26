@@ -34,7 +34,7 @@ const fs = require('fs');
     }
     
     try {
-      await fs.promises.writeFile("C:/Users/Gabriel/Documents/GitHub/Meus-Projetos/Auto-Vagas/"+data.nome, arrayComoString, 'utf8');
+      await fs.promises.writeFile("C:/Users/Gabriel/Documents/GitHub/Auto-Vagas/"+data.nome, arrayComoString, 'utf8');
       console.log(`### Salvarndo arquivo: ${data.nome}. ###`)
     
     } catch (err) {
@@ -66,13 +66,13 @@ const fs = require('fs');
         const resultado = await buscador({
             link: 'https://onlinevagas.com.br/',
             script: function () {
-            let vagasQtd = document.querySelectorAll('.post-box-title a').length;
-            let resultado = [];
+                let vagasQtd = document.querySelectorAll('.post-box-title a').length;
+                let resultado = [];
 
-            for (let i = 0; i < vagasQtd; i++) {
-                resultado.push(document.querySelectorAll('.post-box-title a')[i].href);
-            }
-            return resultado;
+                for (let i = 0; i < vagasQtd; i++) {
+                    resultado.push(document.querySelectorAll('.post-box-title a')[i].href);
+                }
+                return resultado;
             },
         });
         buscarEmails(resultado);
