@@ -1,61 +1,76 @@
 
-                Registro: 23/08/2023 - 22:02,
-                Vaga: Metal Alumínio está contratando Agente de Portaria – Vaga Feminina,
-                Email: vemsermetal@metalaluminio.net.
+                Registro: 26/08/2023 - 12:32,
+                Vaga: Musashi Da Amazônia abre Novas Vagas de Emprego,
+                Email: mdarh@musashi.com.br.
             
             
-                Registro: undefined,
-                Vaga: Empresa oferta vagas para Mecânico de Manutenção Jr,
-                Email: selecaoamjulho@gmail.com Informe o nome da vaga.
+                Registro: 26/08/2023 - 12:32,
+                Vaga: Estamos recrutando Auxiliar de Serviços Gerais – Horário Noturno,
+                Email: biovagasmanaus@gmail.com.
             
             
-                Registro: undefined,
-                Vaga: Megatemp seleciona Operador de Produção – Ambos os Sexos – Salário: R$ 1.698,20,
-                Email: selecao2@megatemp.com.br.
-            
-            
-                Registro: undefined,
-                Vaga: Empresa prestadora de serviços contrata Auxiliar de Serviços Gerais,
-                Email: selecaoeoportunidades2021@gmail.com.
-            
-            
-                Registro: undefined,
-                Vaga: Empresa está contratando AGP – Agente Patrimonial,
-                Email: consultoriarhmao@gmail.com.
-            
-            
-                Registro: undefined,
-                Vaga: Metal Alumínio está contratando Agente de Portaria – Vaga Feminina,
-                Email: vemsermetal@metalaluminio.net.
-            
-            
-                Registro: undefined,
-                Vaga: Empresa oferta vagas para Mecânico de Manutenção Jr,
-                Email: selecaoamjulho@gmail.com Informe o nome da vaga.
-            
-            
-                Registro: undefined,
-                Vaga: Megatemp seleciona Operador de Produção – Ambos os Sexos – Salário: R$ 1.698,20,
-                Email: selecao2@megatemp.com.br.
-            
-            
-                Registro: undefined,
-                Vaga: Empresa prestadora de serviços contrata Auxiliar de Serviços Gerais,
-                Email: selecaoeoportunidades2021@gmail.com.
-            
-            
-                Registro: undefined,
-                Vaga: Empresa está contratando AGP – Agente Patrimonial,
-                Email: consultoriarhmao@gmail.com.
-            
-            
-                Registro: undefined,
-                Vaga: Empresa Sovel contrata Operador de Rebobinadeira – Ensino fundamental completo ou médio,
-                Email: oportunidades.sovel@gmail.com.
-            
-            
-                Registro: undefined,
-                Vaga: Clínica Médica contrata Secretária – Nível Médio,
+                Registro: 26/08/2023 - 12:32,
+                Vaga: Oportunidade para Profissionais atuarem na função de Auxiliar de Produção,
                 Email: vagaseoportunidades02@gmail.com.
+            
+            
+                Registro: 26/08/2023 - 12:32,
+                Vaga: Novamed oferta vagas para Aprendiz,
+                Email: selecao@novamedpharma.com.br Informar o nome da vaga..
+            
+            
+                Registro: 26/08/2023 - 12:32,
+                Vaga: Queiroz Distribuidora Manaus oferta vagas para Diversos Setores,
+                Email: recrutamento@comercialqueiroz.com.br.
+            
+            
+                Registro: undefined,
+                Vaga: Musashi Da Amazônia abre Novas Vagas de Emprego,
+                Email: mdarh@musashi.com.br.
+            
+            
+                Registro: undefined,
+                Vaga: Estamos recrutando Auxiliar de Serviços Gerais – Horário Noturno,
+                Email: biovagasmanaus@gmail.com.
+            
+            
+                Registro: undefined,
+                Vaga: Oportunidade para Profissionais atuarem na função de Auxiliar de Produção,
+                Email: vagaseoportunidades02@gmail.com.
+            
+            
+                Registro: undefined,
+                Vaga: Novamed oferta vagas para Aprendiz,
+                Email: selecao@novamedpharma.com.br Informar o nome da vaga..
+            
+            
+                Registro: undefined,
+                Vaga: Queiroz Distribuidora Manaus oferta vagas para Diversos Setores,
+                Email: recrutamento@comercialqueiroz.com.br.
+            
+            
+                Registro: 26/08/2023 - 12:32,
+                Vaga: Rh Desafio contrata Motorista de Caminhão,
+                Email: atracaoeselecao@desafiorh.com.br.
+            
+            
+                Registro: 26/08/2023 - 12:32,
+                Vaga: RH Desafio contrata Auxiliar Administrativo PCD,
+                Email: atracaoeselecao@desafiorh.com.br.
+            
+            
+                Registro: 26/08/2023 - 12:32,
+                Vaga: Empresa abre vagas para Gestor de Logística,
+                Email: wanier71@gmail.com.
+            
+            
+                Registro: 26/08/2023 - 12:32,
+                Vaga: Indústria abre processo seletivo para Analista de Importação,
+                Email: plasticosezgeo@gmail.com.
+            
+            
+                Registro: 26/08/2023 - 12:32,
+                Vaga: RH Descomplica contrata Vendedor(a) Interno (Agência de Viagens),
+                Email: rhdescomplica22@gmail.com.
             
             
