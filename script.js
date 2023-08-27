@@ -71,7 +71,26 @@ function goCard(registro, vaga, corpo, email, img){
   const nome = localStorage.name
   const telefone = localStorage.tel
   const nomeVaga = vaga
-  const body = `Prezado(a),+%0AEspero+que+esta+mensagem+o+encontre+bem.+Gostaria+de+apresentar+meu+curr%C3%ADculo+em+anexo+como+candidato+%C3%A0+vaga+de+${nomeVaga}+em+sua+empresa.+Acredito+que+minhas+habilidades+e+experi%C3%AAncia+podem+contribuir+significativamente+para+o+crescimento+e+sucesso+da+equipe.+Agrade%C3%A7o+desde+j%C3%A1+pela+aten%C3%A7%C3%A3o+e+considera%C3%A7%C3%A3o.+Estou+%C3%A0+disposi%C3%A7%C3%A3o+para+fornecer+mais+informa%C3%A7%C3%B5es,+participar+de+entrevistas+ou+realizar+quaisquer+etapas+necess%C3%A1rias+do+processo+de+sele%C3%A7%C3%A3o.+%0A%0A%0AAtenciosamente,%0A%0A${nome}%0ATelefone:+${telefone}&fs=1&tf=cm`
+  const body = ''
+
+  if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+    // Código para dispositivos móveis (celulares)
+
+body = `Prezado(a),
+Espero que esta mensagem o encontre bem. Gostaria de apresentar meu currículo em anexo como candidato à vaga de ${nomeVaga} em sua empresa. Acredito que minhas habilidades e experiência podem contribuir significativamente para o crescimento e sucesso da equipe. Agradeço desde já pela atenção e consideração. Estou à disposição para fornecer mais informações, participar de entrevistas ou realizar quaisquer etapas necessárias do processo de seleção.
+
+
+Atenciosamente,
+
+${nome}
+Telefone: ${telefone}`
+
+  } else {
+      // Código para computadores
+
+    body = `Prezado(a),+%0AEspero+que+esta+mensagem+o+encontre+bem.+Gostaria+de+apresentar+meu+curr%C3%ADculo+em+anexo+como+candidato+%C3%A0+vaga+de+${nomeVaga}+em+sua+empresa.+Acredito+que+minhas+habilidades+e+experi%C3%AAncia+podem+contribuir+significativamente+para+o+crescimento+e+sucesso+da+equipe.+Agrade%C3%A7o+desde+j%C3%A1+pela+aten%C3%A7%C3%A3o+e+considera%C3%A7%C3%A3o.+Estou+%C3%A0+disposi%C3%A7%C3%A3o+para+fornecer+mais+informa%C3%A7%C3%B5es,+participar+de+entrevistas+ou+realizar+quaisquer+etapas+necess%C3%A1rias+do+processo+de+sele%C3%A7%C3%A3o.+%0A%0A%0AAtenciosamente,%0A%0A${nome}%0ATelefone:+${telefone}&fs=1&tf=cm`
+  }
+
   const gmail = `mailto:${email}?subject=${nomeVaga}&body=${body}`
   
   cardRegistro.innerHTML = registro
