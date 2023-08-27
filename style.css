@@ -1,3 +1,6 @@
+html{
+  scroll-behavior: smooth;
+}
 *{
   transition: 200ms;
   box-sizing: border-box;
