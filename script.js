@@ -65,6 +65,19 @@ function closeCard(){
   document.getElementById('card').style.display = 'none'
 }
 
+function formatText(inputString) {
+  // Substituir espaços por traços
+  let formattedString = inputString.replace(/ /g, '-');
+  
+  // Remover caracteres especiais usando expressão regular
+  formattedString = formattedString.replace(/[^a-zA-Z0-9\-]/g, '');
+
+  return formattedString;
+}
+
+
+
+
 function goCard(registro, vaga, corpo, email, img){
   document.getElementById('card').style.display = 'block'
   
@@ -84,7 +97,26 @@ function goCard(registro, vaga, corpo, email, img){
   
 }
 
+
+
 function exibirVagas(vagas){
+  function compareDateTime(a, b) {
+    const dateTimeA = `${a.hora}:${a.minuto} - ${a.dia}/${a.mes}/${a.ano}`;
+    const dateTimeB = `${b.hora}:${b.minuto} - ${b.dia}/${b.mes}/${b.ano}`;
+    
+    if (dateTimeA < dateTimeB) {
+      return 1;
+    }
+    if (dateTimeA > dateTimeB) {
+      return -1;
+    }
+    return 0;
+  }
+  vagas.sort(compareDateTime)
+  const urlParams = new URLSearchParams(window.location.search);
+  const vaga = urlParams.get('v');
+
+
   const listaVagas = document.getElementById('listaVagas')
 
 
@@ -94,47 +126,100 @@ function exibirVagas(vagas){
   const ano = agora.getFullYear();
 
 
+  if(vaga){
+    vagas.forEach((element)=>{
+      if(formatText(element.vaga) == vaga){
+        goCard(`${element.hora}:${element.minuto} - ${element.dia}/${element.mes}/${element.ano}`, 
+        element.vaga, element.content, element.email, element.img
+        )
+        
 
-  vagas.forEach((element)=>{
+        vagas.forEach((element)=>{
   
-    if(dia == element.dia && mes == element.mes && ano == element.ano){
-      const registro = `${element.hora}:${element.minuto} - ${element.dia}/${element.mes}/${element.ano}`
-      let corpo = ''
-      element.content.forEach((e)=>{
-        corpo += e
-      })
+          if(dia == element.dia && mes == element.mes && ano == element.ano){
+            const registro = `${element.hora}:${element.minuto} - ${element.dia}/${element.mes}/${element.ano}`
+            let corpo = ''
+            element.content.forEach((e)=>{
+              corpo += e
+            })
+            
       
-
-      listaVagas.innerHTML += `
-        <a href="#card" onclick="goCard('${registro}', '${element.content[1]}', '${corpo}', '${element.email}', '${element.img}')" class="card bg-green-100">
-          <img src="${element.img}" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">${element.vaga}</h5>
+            listaVagas.innerHTML += `
+              <a href="?v=${formatText(element.vaga)}" class="card bg-green-100">
+                <img src="${element.img}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">${element.vaga}</h5>
+                
+                  <p class="card-text"><small class="text-body-secondary">${registro}</small></p>
+                </div>
+              </a>
+            `;
+          }else{
+            const registro = `${element.hora}:${element.minuto} - ${element.dia}/${element.mes}/${element.ano}`
+            let corpo = ''
+            element.content.forEach((e)=>{
+              corpo += e
+            })
+      
+            listaVagas.innerHTML += `
+              <a href="?v=${formatText(element.vaga)}"  onclick="goCard('${registro}', '${element.content[1]}', '${corpo}', '${element.email}', '${element.img}')" class="card">
+                <img src="${element.img}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">${element.vaga}</h5>
+                
+                  <p class="card-text"><small class="text-body-secondary">${registro}</small></p>
+                </div>
+              </a>
+            `;
+          }
           
-            <p class="card-text"><small class="text-body-secondary">${registro}</small></p>
-          </div>
-        </a>
-      `;
-    }else{
-      const registro = `${element.hora}:${element.minuto} - ${element.dia}/${element.mes}/${element.ano}`
-      let corpo = ''
-      element.content.forEach((e)=>{
-        corpo += e
-      })
+        })
+      }
+    })
+ 
+  }else{
+    vagas.forEach((element)=>{
+  
+      if(dia == element.dia && mes == element.mes && ano == element.ano){
+        const registro = `${element.hora}:${element.minuto} - ${element.dia}/${element.mes}/${element.ano}`
+        let corpo = ''
+        element.content.forEach((e)=>{
+          corpo += e
+        })
+        
+  
+        listaVagas.innerHTML += `
+          <a href="?v=${formatText(element.vaga)}" class="card bg-green-100">
+            <img src="${element.img}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">${element.vaga}</h5>
+            
+              <p class="card-text"><small class="text-body-secondary">${registro}</small></p>
+            </div>
+          </a>
+        `;
+      }else{
+        const registro = `${element.hora}:${element.minuto} - ${element.dia}/${element.mes}/${element.ano}`
+        let corpo = ''
+        element.content.forEach((e)=>{
+          corpo += e
+        })
+  
+        listaVagas.innerHTML += `
+          <a href="?v=${formatText(element.vaga)}"  onclick="goCard('${registro}', '${element.content[1]}', '${corpo}', '${element.email}', '${element.img}')" class="card">
+            <img src="${element.img}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">${element.vaga}</h5>
+            
+              <p class="card-text"><small class="text-body-secondary">${registro}</small></p>
+            </div>
+          </a>
+        `;
+      }
+      
+    })
+  }
 
-      listaVagas.innerHTML += `
-        <a href="#card"  onclick="goCard('${registro}', '${element.content[1]}', '${corpo}', '${element.email}', '${element.img}')" class="card">
-          <img src="${element.img}" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">${element.vaga}</h5>
-          
-            <p class="card-text"><small class="text-body-secondary">${registro}</small></p>
-          </div>
-        </a>
-      `;
-    }
-    
-  })
 
 }
 
