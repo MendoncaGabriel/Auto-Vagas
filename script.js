@@ -129,8 +129,13 @@ function exibirVagas(vagas){
   if(vaga){
     vagas.forEach((element)=>{
       if(formatText(element.vaga) == vaga){
+        let bodyCard =  ''
+        element.content.forEach((p)=>{
+          bodyCard += p + '<br>'
+        })
+
         goCard(`${element.hora}:${element.minuto} - ${element.dia}/${element.mes}/${element.ano}`, 
-        element.vaga, element.content, element.email, element.img
+        element.vaga, bodyCard, element.email, element.img
         )
         
 
