@@ -101,8 +101,8 @@ function goCard(registro, vaga, corpo, email, img){
 
 function exibirVagas(vagas){
   function compareDateTime(a, b) {
-    const dateTimeA = `${a.hora}:${a.minuto} - ${a.dia}/${a.mes}/${a.ano}`;
-    const dateTimeB = `${b.hora}:${b.minuto} - ${b.dia}/${b.mes}/${b.ano}`;
+    const dateTimeA = `${a.ano}${a.mes}${a.dia}`;
+    const dateTimeB = `${b.ano}${b.mes}${b.dia}`;
     
     if (dateTimeA < dateTimeB) {
       return 1;
