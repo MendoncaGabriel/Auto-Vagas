@@ -101,8 +101,8 @@ function goCard(registro, vaga, corpo, email, img){
 
 function exibirVagas(vagas){
   function compareDateTime(a, b) {
-    const dateTimeA = `${a.ano}${a.mes}${a.dia}`;
-    const dateTimeB = `${b.ano}${b.mes}${b.dia}`;
+    const dateTimeA = `${a.ano}${a.mes}${a.dia}${a.hora}${a.minuto}`;
+    const dateTimeB = `${b.ano}${b.mes}${b.dia}${a.hora}${a.minuto}`;
     
     if (dateTimeA < dateTimeB) {
       return 1;
@@ -151,7 +151,7 @@ function exibirVagas(vagas){
       
             listaVagas.innerHTML += `
               <a href="?v=${formatText(element.vaga)}" class="card bg-green-100">
-                <img src="${element.img}" class="card-img-top" alt="...">
+                <img src="${element.img}" class="card-img-top h-40 object-cover" alt="...">
                 <div class="card-body">
                   <h5 class="card-title">${element.vaga}</h5>
                 
@@ -168,7 +168,7 @@ function exibirVagas(vagas){
       
             listaVagas.innerHTML += `
               <a href="?v=${formatText(element.vaga)}"  onclick="goCard('${registro}', '${element.content[1]}', '${corpo}', '${element.email}', '${element.img}')" class="card">
-                <img src="${element.img}" class="card-img-top" alt="...">
+                <img src="${element.img}" class="card-img-top h-40 object-cover" alt="...">
                 <div class="card-body">
                   <h5 class="card-title">${element.vaga}</h5>
                 
@@ -195,7 +195,7 @@ function exibirVagas(vagas){
   
         listaVagas.innerHTML += `
           <a href="?v=${formatText(element.vaga)}" class="card bg-green-100">
-            <img src="${element.img}" class="card-img-top" alt="...">
+            <img src="${element.img}" class="card-img-top h-40 object-cover" alt="...">
             <div class="card-body">
               <h5 class="card-title">${element.vaga}</h5>
             
@@ -212,7 +212,7 @@ function exibirVagas(vagas){
   
         listaVagas.innerHTML += `
           <a href="?v=${formatText(element.vaga)}"  onclick="goCard('${registro}', '${element.content[1]}', '${corpo}', '${element.email}', '${element.img}')" class="card">
-            <img src="${element.img}" class="card-img-top" alt="...">
+            <img src="${element.img}" class="card-img-top h-40 object-cover" alt="...">
             <div class="card-body">
               <h5 class="card-title">${element.vaga}</h5>
             
